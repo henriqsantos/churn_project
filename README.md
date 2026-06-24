@@ -37,14 +37,14 @@ An initial **Logistic Regression** model was trained.
 - **Result:** The model achieved **76% overall accuracy**.
 - **Diagnosis:** Despite solid accuracy on stable customers, the model produced a low *Recall* score (42%) for the Churn class (1), failing to identify more than half of the customers who actually cancelled their contracts.
 
-### 4. Feature Engineering & Optimisation (In Progress 🚀)
+### 4. Feature Engineering & Optimisation
+* We incorporated the client’s financial context by adding the `MonthlyCharges` variable (invoice amount).
+* We balanced the class weights (`class_weight=“balanced”`) in the logistic regression to force the model to focus on cancellation attempts.
 
-With the bottleneck in v1.0 identified, the next steps are:
-
-- Incorporating the customer's financial context by adding the `MonthlyCharges` feature.
-- Balancing class weights (`class_weight='balanced'`) to direct the model's focus towards cancellation cases.
-
----
+### 5. Results of the Optimised Model (Version 2.0) 
+Following the optimisations, the model showed a significant improvement for the business:
+* **Churn Recall (Class 1):** Jumped from **42%** to **79%** (a 37 percentage point increase in the ability to detect cancellations).
+* **Overall Accuracy:** Adjusted from **76%** to **73%**, an extremely healthy and expected trade-off for the success of the retention strategy.
 
 ##  Technologies & Tools
 
